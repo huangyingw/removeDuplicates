@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -16,8 +17,9 @@ public class removeDuplicates_class {
 		// String[] arr = { "good", "better", "best", "best", "first", "last",
 		// "last", "last", "good" };
 		// List test = Arrays.asList(arr);
-		List<String> test1 = Arrays.asList("good", "better", "best", "best",
-				"first", "last", "last", "last", "good");
+		List<String> test1 = new ArrayList<String>(Arrays.asList("good",
+				"better", "best", "best", "first", "last", "last", "last",
+				"good"));
 		removeDuplicates(test1);
 		for (String str : test1) {
 			System.out.print(str + ",");
