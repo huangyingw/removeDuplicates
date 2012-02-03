@@ -1,22 +1,23 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 public class removeDuplicates_class {
 	static void removeDuplicates(List<String> obj) {
-		for (int i = 0; i < obj.size(); i++) {
-			for (int j = obj.size() - 1; j > i; j--) {
-				if (obj.get(i).equals(obj.get(j))) {
-					obj.remove(j);
-				}
+		Iterator<String> iteri = obj.iterator();
+		Iterator<String> iterj;
+		while (iteri.hasNext()) {
+			iterj = iteri;
+			while (iterj.hasNext()) {
+				if (iteri.equals(iterj.next()))
+					iterj.remove();
 			}
+			iteri.next();
 		}
 	}
 
 	public static void main(String args[]) {
-		// String[] arr = { "good", "better", "best", "best", "first", "last",
-		// "last", "last", "good" };
-		// List test = Arrays.asList(arr);
 		List<String> test1 = new ArrayList<String>(Arrays.asList("good",
 				"better", "best", "best", "first", "last", "last", "last",
 				"good"));
