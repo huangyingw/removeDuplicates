@@ -4,6 +4,8 @@ import java.util.List;
 
 public class removeDuplicates_class {
 	static void removeDuplicates(List<String> obj) {
+		if (obj == null)
+			return;
 		for (int i = 0; i < obj.size(); i++) {
 			for (int j = obj.size() - 1; j > i; j--) {
 				if (obj.get(i).equals(obj.get(j))) {
@@ -24,5 +26,15 @@ public class removeDuplicates_class {
 		for (String str : test1) {
 			System.out.print(str + ",");
 		}
+		System.out.println();
+
+		test1 = null;
+		removeDuplicates(test1);
+		if (test1 == null)
+			return;
+		else
+			for (String str : test1) {
+				System.out.print(str + ",");
+			}
 	}
 }
