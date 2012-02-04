@@ -32,9 +32,5 @@ public class removeDuplicates_class {
 		removeDuplicates(test1);
 		if (test1 == null)
 			return;
-		else
-			for (String str : test1) {
-				System.out.print(str + ",");
-			}
 	}
 }
