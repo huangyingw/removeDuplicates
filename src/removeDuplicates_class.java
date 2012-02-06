@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class removeDuplicates_class {
 	static void removeDuplicates(List<String> obj) {
@@ -15,6 +17,13 @@ public class removeDuplicates_class {
 		}
 	}
 
+	static void removeDuplicates_set(List<String> obj) {
+		Set<String> set = new HashSet<String>();
+		set.addAll(obj);
+		obj.clear();
+		obj.addAll(set);
+	}
+
 	public static void main(String args[]) {
 		List<String> test1 = new ArrayList<String>(Arrays.asList("good",
 				"better", "best", "best", "first", "last", "last", "last",
@@ -25,9 +34,12 @@ public class removeDuplicates_class {
 		}
 		System.out.println();
 
-		test1 = null;
-		removeDuplicates(test1);
-		if (test1 == null)
-			return;
+		test1 = new ArrayList<String>(Arrays.asList("good", "better", "best",
+				"best", "first", "last", "last", "last", "good"));
+		removeDuplicates_set(test1);
+		for (String str : test1) {
+			System.out.print(str + ",");
+		}
+
 	}
 }
