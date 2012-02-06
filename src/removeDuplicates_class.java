@@ -16,9 +16,6 @@ public class removeDuplicates_class {
 	}
 
 	public static void main(String args[]) {
-		// String[] arr = { "good", "better", "best", "best", "first", "last",
-		// "last", "last", "good" };
-		// List test = Arrays.asList(arr);
 		List<String> test1 = new ArrayList<String>(Arrays.asList("good",
 				"better", "best", "best", "first", "last", "last", "last",
 				"good"));
